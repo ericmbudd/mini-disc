@@ -1,5 +1,5 @@
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('mini-discs', function(table) {
+  return knex.schema.createTable('minidiscs', function(table) {
     // TABLE COLUMN DEFINITIONS HERE
     table.increments()
     table.string('title', 255).notNullable().defaultTo('')
@@ -14,5 +14,5 @@ exports.up = function(knex, Promise) {
   })
 }
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTableIfExists('mini-discs')
+  return knex.schema.dropTableIfExists('minidiscs')
 }
